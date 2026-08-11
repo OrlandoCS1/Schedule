@@ -26,6 +26,7 @@ nav {
     padding-left: 10px;
     padding-right: 10px;
     position: static;
+
 }
 
 .logo_container{
@@ -91,18 +92,19 @@ nav {
     background-color: #6C63FF;
     border-radius: 10px;
     padding: 10px;
+    
 }
 
 #week_container{
     border: #61698B;
-    border-radius: 10px;
-
-    width: 100%;
-    height: 100vh;
+    border-radius: 20px;
+    background-color: #161921;
+    
+    
+    height: 180vh;
     display: grid;
-
     grid-template-columns: 5vw repeat(7, 1fr);
-    grid-template-rows: 5vw repeat(17, 1fr);
+    grid-template-rows: 4vw repeat(17, 1fr);
 
     grid-template-areas:
     "corner day-mon day-tue day-wed day-thu day-fri day-sat day-sun"
@@ -124,12 +126,80 @@ nav {
     "hour-10pm mon-10pm tue-10pm wed-10pm thu-10pm fri-10pm sat-10pm sun-10pm"
     "hour-11pm mon-11pm tue-11pm wed-11pm thu-11pm fri-11pm sat-11pm sun-11pm";
 
-    
-
-    
 }
 
 .corner{
     grid-area: corner;
+    background-color: #161921;
+    position: sticky;
+    border: 1px solid #2e323d6b;
+    top: 0;
+}
+
+.day_cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #2e323d6b;
+    background-color: #161921;
+    position: sticky;
+    top: 0;
+}
+
+.day_cell p{
+    font-size: 1rem;
+    font-family: 'JetBrains Mono';
+    color: white;
+}
+
+.day_cell h5{
+    font-size: 23px;
+    font-family: 'Outfit';
+    color: white;
+}
+
+.hour_cell{
+    border: 1px solid #2e323d6b;
+}
+
+
+.label_hour{
+    font-size: 13px;
+    font-family: 'JetBrains Mono';
+    text-align: right;
+    margin: 10px;
+    color:#6a7399;
+}
+
+.cell{
+    border: 1px solid #2e323d6b;
+
+}
+
+
+
+.controls{
+    display: flex;
+    width: 100%;
+    --border: 1px solid white;
+    align-items: center;
+    justify-content: end;
+    height: 3vw;
+    min-height: 40px;
+    
+}
+
+#add_btn{
+    border-radius: 10px;
+    width: 5vw;
+    height: 85%;
+    color: white;
     background-color: #6C63FF;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    
 }

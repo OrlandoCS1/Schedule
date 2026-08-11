@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'JetBrains Mono';
+    
+}
+
+
+
+body{
+    background-color: #0D0F14;
+    color: white;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 10vh;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.158);
+    padding-left: 10px;
+    padding-right: 10px;
+    position: static;
+}
+
+.logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo_container i{
+    background-color: #6C63FF;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    width: 45px;
+    height: 45px;
+}
+
+.logo_container p{
+    font-family: 'Outfit';
+    font-size: 3vh;
+    font-weight: 700;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1rem
+}
+
+#period{
+    color: rgba(255, 255, 255, 0.466)
+}
+
+#couple_name{
+    font-family: 'Outfit';
+}
+
+.slider{
+    display: flex;
+    box-sizing: border-box;
+    background-color: #1E2130;
+    border-radius: 10px;
+    padding: 3px;
+    gap: 5px;
+}
+
+.day_btn{
+    color: #61698B;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.week_btn{
+    box-sizing: content-box;
+    background-color: #6C63FF;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#week_container{
+    border: #61698B;
+    border-radius: 10px;
+
+    width: 100%;
+    height: 100vh;
+    display: grid;
+
+    grid-template-columns: 5vw repeat(7, 1fr);
+    grid-template-rows: 5vw repeat(17, 1fr);
+
+    grid-template-areas:
+    "corner day-mon day-tue day-wed day-thu day-fri day-sat day-sun"
+    "hour-7am  mon-7am  tue-7am  wed-7am  thu-7am  fri-7am  sat-7am  sun-7am"
+    "hour-8am  mon-8am  tue-8am  wed-8am  thu-8am  fri-8am  sat-8am  sun-8am"
+    "hour-9am  mon-9am  tue-9am  wed-9am  thu-9am  fri-9am  sat-9am  sun-9am"
+    "hour-10am mon-10am tue-10am wed-10am thu-10am fri-10am sat-10am sun-10am"
+    "hour-11am mon-11am tue-11am wed-11am thu-11am fri-11am sat-11am sun-11am"
+    "hour-12pm mon-12pm tue-12pm wed-12pm thu-12pm fri-12pm sat-12pm sun-12pm"
+    "hour-1pm  mon-1pm  tue-1pm  wed-1pm  thu-1pm  fri-1pm  sat-1pm  sun-1pm"
+    "hour-2pm  mon-2pm  tue-2pm  wed-2pm  thu-2pm  fri-2pm  sat-2pm  sun-2pm"
+    "hour-3pm  mon-3pm  tue-3pm  wed-3pm  thu-3pm  fri-3pm  sat-3pm  sun-3pm"
+    "hour-4pm  mon-4pm  tue-4pm  wed-4pm  thu-4pm  fri-4pm  sat-4pm  sun-4pm"
+    "hour-5pm  mon-5pm  tue-5pm  wed-5pm  thu-5pm  fri-5pm  sat-5pm  sun-5pm"
+    "hour-6pm  mon-6pm  tue-6pm  wed-6pm  thu-6pm  fri-6pm  sat-6pm  sun-6pm"
+    "hour-7pm  mon-7pm  tue-7pm  wed-7pm  thu-7pm  fri-7pm  sat-7pm  sun-7pm"
+    "hour-8pm  mon-8pm  tue-8pm  wed-8pm  thu-8pm  fri-8pm  sat-8pm  sun-8pm"
+    "hour-9pm  mon-9pm  tue-9pm  wed-9pm  thu-9pm  fri-9pm  sat-9pm  sun-9pm"
+    "hour-10pm mon-10pm tue-10pm wed-10pm thu-10pm fri-10pm sat-10pm sun-10pm"
+    "hour-11pm mon-11pm tue-11pm wed-11pm thu-11pm fri-11pm sat-11pm sun-11pm";
+
+    
+
+    
+}
+
+.corner{
+    grid-area: corner;
+    background-color: #6C63FF;
+}

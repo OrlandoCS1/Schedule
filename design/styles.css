@@ -10,8 +10,11 @@
 
 
 body{
+    position: relative;
+    
     background-color: #0D0F14;
     color: white;
+    overflow-x: hidden;
 }
 
 
@@ -43,14 +46,14 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 2rem;
     width: 45px;
     height: 45px;
 }
 
 .logo_container p{
     font-family: 'Outfit';
-    font-size: 3vh;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -64,11 +67,13 @@ nav {
 }
 
 #period{
-    color: rgba(255, 255, 255, 0.466)
+    color: rgba(255, 255, 255, 0.466);
+    font-size: 1rem;
 }
 
 #couple_name{
     font-family: 'Outfit';
+    font-size: 1rem;
 }
 
 .slider{
@@ -78,6 +83,7 @@ nav {
     border-radius: 10px;
     padding: 3px;
     gap: 5px;
+    font-size: 1rem;
 }
 
 .day_btn{
@@ -85,6 +91,7 @@ nav {
     text-align: center;
     border-radius: 10px;
     padding: 10px;
+
 }
 
 .week_btn{
@@ -101,30 +108,64 @@ nav {
     background-color: #161921;
     
     
-    height: 180vh;
+    height: auto;
     display: grid;
-    grid-template-columns: 5vw repeat(7, 1fr);
-    grid-template-rows: 4vw repeat(17, 1fr);
+    grid-template-columns: 1fr repeat(7, 1fr);
+    grid-template-rows: 8vh repeat(34, 8vh);
 
     grid-template-areas:
     "corner day-mon day-tue day-wed day-thu day-fri day-sat day-sun"
-    "hour-7am  mon-7am  tue-7am  wed-7am  thu-7am  fri-7am  sat-7am  sun-7am"
-    "hour-8am  mon-8am  tue-8am  wed-8am  thu-8am  fri-8am  sat-8am  sun-8am"
-    "hour-9am  mon-9am  tue-9am  wed-9am  thu-9am  fri-9am  sat-9am  sun-9am"
-    "hour-10am mon-10am tue-10am wed-10am thu-10am fri-10am sat-10am sun-10am"
-    "hour-11am mon-11am tue-11am wed-11am thu-11am fri-11am sat-11am sun-11am"
-    "hour-12pm mon-12pm tue-12pm wed-12pm thu-12pm fri-12pm sat-12pm sun-12pm"
-    "hour-1pm  mon-1pm  tue-1pm  wed-1pm  thu-1pm  fri-1pm  sat-1pm  sun-1pm"
-    "hour-2pm  mon-2pm  tue-2pm  wed-2pm  thu-2pm  fri-2pm  sat-2pm  sun-2pm"
-    "hour-3pm  mon-3pm  tue-3pm  wed-3pm  thu-3pm  fri-3pm  sat-3pm  sun-3pm"
-    "hour-4pm  mon-4pm  tue-4pm  wed-4pm  thu-4pm  fri-4pm  sat-4pm  sun-4pm"
-    "hour-5pm  mon-5pm  tue-5pm  wed-5pm  thu-5pm  fri-5pm  sat-5pm  sun-5pm"
-    "hour-6pm  mon-6pm  tue-6pm  wed-6pm  thu-6pm  fri-6pm  sat-6pm  sun-6pm"
-    "hour-7pm  mon-7pm  tue-7pm  wed-7pm  thu-7pm  fri-7pm  sat-7pm  sun-7pm"
-    "hour-8pm  mon-8pm  tue-8pm  wed-8pm  thu-8pm  fri-8pm  sat-8pm  sun-8pm"
-    "hour-9pm  mon-9pm  tue-9pm  wed-9pm  thu-9pm  fri-9pm  sat-9pm  sun-9pm"
-    "hour-10pm mon-10pm tue-10pm wed-10pm thu-10pm fri-10pm sat-10pm sun-10pm"
-    "hour-11pm mon-11pm tue-11pm wed-11pm thu-11pm fri-11pm sat-11pm sun-11pm";
+
+    "hour-7am   mon-7am   tue-7am   wed-7am   thu-7am   fri-7am   sat-7am   sun-7am"
+    "hour-730am mon-730am tue-730am wed-730am thu-730am fri-730am sat-730am sun-730am"
+
+    "hour-8am   mon-8am   tue-8am   wed-8am   thu-8am   fri-8am   sat-8am   sun-8am"
+    "hour-830am mon-830am tue-830am wed-830am thu-830am fri-830am sat-830am sun-830am"
+
+    "hour-9am   mon-9am   tue-9am   wed-9am   thu-9am   fri-9am   sat-9am   sun-9am"
+    "hour-930am mon-930am tue-930am wed-930am thu-930am fri-930am sat-930am sun-930am"
+
+    "hour-10am   mon-10am   tue-10am   wed-10am   thu-10am   fri-10am   sat-10am   sun-10am"
+    "hour-1030am mon-1030am tue-1030am wed-1030am thu-1030am fri-1030am sat-1030am sun-1030am"
+
+    "hour-11am   mon-11am   tue-11am   wed-11am   thu-11am   fri-11am   sat-11am   sun-11am"
+    "hour-1130am mon-1130am tue-1130am wed-1130am thu-1130am fri-1130am sat-1130am sun-1130am"
+
+    "hour-12pm   mon-12pm   tue-12pm   wed-12pm   thu-12pm   fri-12pm   sat-12pm   sun-12pm"
+    "hour-1230pm mon-1230pm tue-1230pm wed-1230pm thu-1230pm fri-1230pm sat-1230pm sun-1230pm"
+
+    "hour-1pm   mon-1pm   tue-1pm   wed-1pm   thu-1pm   fri-1pm   sat-1pm   sun-1pm"
+    "hour-130pm mon-130pm tue-130pm wed-130pm thu-130pm fri-130pm sat-130pm sun-130pm"
+
+    "hour-2pm   mon-2pm   tue-2pm   wed-2pm   thu-2pm   fri-2pm   sat-2pm   sun-2pm"
+    "hour-230pm mon-230pm tue-230pm wed-230pm thu-230pm fri-230pm sat-230pm sun-230pm"
+
+    "hour-3pm   mon-3pm   tue-3pm   wed-3pm   thu-3pm   fri-3pm   sat-3pm   sun-3pm"
+    "hour-330pm mon-330pm tue-330pm wed-330pm thu-330pm fri-330pm sat-330pm sun-330pm"
+
+    "hour-4pm   mon-4pm   tue-4pm   wed-4pm   thu-4pm   fri-4pm   sat-4pm   sun-4pm"
+    "hour-430pm mon-430pm tue-430pm wed-430pm thu-430pm fri-430pm sat-430pm sun-430pm"
+
+    "hour-5pm   mon-5pm   tue-5pm   wed-5pm   thu-5pm   fri-5pm   sat-5pm   sun-5pm"
+    "hour-530pm mon-530pm tue-530pm wed-530pm thu-530pm fri-530pm sat-530pm sun-530pm"
+
+    "hour-6pm   mon-6pm   tue-6pm   wed-6pm   thu-6pm   fri-6pm   sat-6pm   sun-6pm"
+    "hour-630pm mon-630pm tue-630pm wed-630pm thu-630pm fri-630pm sat-630pm sun-630pm"
+
+    "hour-7pm   mon-7pm   tue-7pm   wed-7pm   thu-7pm   fri-7pm   sat-7pm   sun-7pm"
+    "hour-730pm mon-730pm tue-730pm wed-730pm thu-730pm fri-730pm sat-730pm sun-730pm"
+
+    "hour-8pm   mon-8pm   tue-8pm   wed-8pm   thu-8pm   fri-8pm   sat-8pm   sun-8pm"
+    "hour-830pm mon-830pm tue-830pm wed-830pm thu-830pm fri-830pm sat-830pm sun-830pm"
+
+    "hour-9pm   mon-9pm   tue-9pm   wed-9pm   thu-9pm   fri-9pm   sat-9pm   sun-9pm"
+    "hour-930pm mon-930pm tue-930pm wed-930pm thu-930pm fri-930pm sat-930pm sun-930pm"
+
+    "hour-10pm   mon-10pm   tue-10pm   wed-10pm   thu-10pm   fri-10pm   sat-10pm   sun-10pm"
+    "hour-1030pm mon-1030pm tue-1030pm wed-1030pm thu-1030pm fri-1030pm sat-1030pm sun-1030pm"
+
+    "hour-11pm   mon-11pm   tue-11pm   wed-11pm   thu-11pm   fri-11pm   sat-11pm   sun-11pm"
+    "hour-1130pm mon-1130pm tue-1130pm wed-1130pm thu-1130pm fri-1130pm sat-1130pm sun-1130pm";
 
 }
 
@@ -134,6 +175,7 @@ nav {
     position: sticky;
     border: 1px solid #2e323d6b;
     top: 0;
+    
 }
 
 .day_cell{
@@ -143,6 +185,7 @@ nav {
     border: 1px solid #2e323d6b;
     background-color: #161921;
     position: sticky;
+    font-size: 1.5rem;
     top: 0;
 }
 
@@ -160,7 +203,8 @@ nav {
 
 .hour_cell{
     border: 1px solid #2e323d6b;
-}
+    
+}   
 
 
 .label_hour{
@@ -169,6 +213,8 @@ nav {
     text-align: right;
     margin: 10px;
     color:#6a7399;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
 }
 
 .cell{
@@ -202,4 +248,149 @@ nav {
     padding-left: 10px;
     padding-right: 10px;
     
+    
 }
+
+#add_btn:hover{
+    cursor: pointer;
+}
+
+
+
+.modalOn{
+    position: absolute;
+    
+    top: 0;
+    z-index: 10;
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: #1618228f;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modalOff{
+    display: none; 
+}
+
+.addForm{
+    
+    width: 600px;
+    height: auto;
+
+    margin: 20px;
+
+    max-width: 400px;
+    min-width: 200px;
+    
+
+    background-color: #161921;
+    border-radius: 15px;
+
+    padding: 20px;
+    border: 1px solid #1E2036;
+}
+
+.title_cancel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.title_cancel h1{
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Outfit';
+
+}
+
+.title_cancel div{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1E2130;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_cancel i{
+    font-size: 1.5rem;
+    color: #ff9e9e90;
+    font-weight: 600;
+
+}
+
+.separator{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.num_separator{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    
+}
+
+.num_separator .separator{
+    box-sizing: border-box;
+    width: 100%;
+    
+    
+}
+
+@media(max-width: 470px){
+    .num_separator{
+        flex-wrap: wrap;
+    }
+}
+
+
+.addForm label{
+    font-family: 'JetBrains Mono';
+    font-size: 0.8rem;
+    color: #6a7399
+}
+
+.addForm input{
+    border-radius: 10px;
+    background-color: #1E2130;
+    outline: none;
+    border: 1px solid #6a73995b;
+    height: 37px;
+    padding-left: 10px;
+    font-family: 'Outfit';
+    color: white;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+#btn_submit{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    border: none;
+    background-image: linear-gradient(to right, #6C63FF, #ff9e9e);
+    color: white;
+    font-family: 'Outfit';
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 13px;
+    
+}
+
+#btn_submit:hover{
+    cursor: pointer;
+}
+

@@ -38,9 +38,7 @@
                 <p>Add</p>
             </div>
             <div class = "add_form">
-                <form action="" method="post">
-                    
-                </form>
+               
             </div>  
         </div>
 
@@ -48,7 +46,93 @@
         <main id="week_container">
             <div class = "corner"></div>
         </main>
-        <script src="../week_script.js"></script>
+       
     </header>
+    <div class = "modalOff" id = "modal">
+        <form action="" method="post" class = "addForm">
+            <div class = "title_cancel">
+                <h1>New Event</h1>
+                <div id = "close_modal_btn">
+                    <i class="bi bi-x"></i>
+                </div>
+            </div>
+            
+            <div class = "separator">
+                <label for="title_event">Title *</label>
+                <input type="text" maxlength="20" id="title" class = "inputs" name="title_event">
+            </div>
+
+            <div class = "separator">
+                <label for="notes">Notes</label>
+                <input type="text" maxlength="50" id="notes" class = "inputs" name = "notes">
+            </div>
+
+            <div class = "separator">
+                <label for="Category">Category *</label>
+                <input type="text" name="Category" id = "category" class = "inputs" list = "category_opts">
+                <datalist id = "category_opts">
+                    <option value="School">School</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Tasks">Tasks</option>
+                    <option value="Couple">Couple</option>
+                </datalist>
+            </div>
+
+            <div class = "separator">
+                <label for="Category">Day *</label>
+                <input type="text" name="Day" id = "day" class = "inputs" list = "days">
+                <datalist id = "days">
+                    <option value="mon">Monday</option>
+                    <option value="tue">Tuesday</option>
+                    <option value="wed">Wednesday</option>
+                    <option value="thu">Thursday</option>
+                    <option value="fri">Friday</option>
+                    <option value="sat">Saturday</option>
+                    <option value="sun">Sunday</option>
+                </datalist>
+            </div>
+
+
+
+            <div class = "num_separator">
+                <div class="separator">
+                    <label for="start">Starts: *</label>
+                    <input type="text" name = "start" list="hours_data" id = "start">
+                    <datalist id = "hours_data" >   
+                    </datalist>
+                </div>
+                
+                <div class="separator">
+                    <label for="end">Duration: *</label>
+                    <input type="text" name = "end" list = "duration" id = "end">
+                    <datalist id = "duration" >  
+                        <option value=".5">30 min</option>
+                        <option value="1">1 hr</option> 
+                        <option value="1.5">1.5 hrs</option>
+                        <option value="2">2 hrs</option>
+
+                        <option value="2.5">2.5 hrs</option>
+                        <option value="3">3 hrs</option> 
+                        <option value="3.5">3.5 hrs</option>
+                        <option value="4">4 hrs</option>
+                        <option value="4.5">4.5 hrs</option>
+                        <option value="5">5 hrs</option>
+                    </datalist>
+                </div>
+                
+            </div>
+
+            
+
+            <button type="button" id = "btn_submit">
+                Add to Schedule
+            </button>
+
+        </form>
+    </div>
 </body>
+
+<script src="week_script.js"></script>
+<script src="add.js"></script>
+
 </html>

@@ -1,5 +1,6 @@
 const weekGrid = document.getElementById("week_container");
-const hour_data = document.getElementById("hours_data");
+const hoursDataStart = document.getElementById("hours_data_start");
+const hourDataEnd = document.getElementById("hours_data_end");
 
 
 const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -24,6 +25,15 @@ const hours = [
     '10PM', '10:30PM',
     '11PM', '11:30PM'
 ];
+
+const rows = [
+    '2', '3', '4', '5', '6', '7', '8', '9', '10',
+    '11', '12', '13', '14', '15', '16', '17', '18', '19',
+    '20', '21', '22', '23', '24', '25', '26', '27', '28',
+    '29', '30', '31', '32', '33', '34', '35'
+];
+
+
 
 const dayCell = document.createElement('span');
 days.forEach((day, index) => {
@@ -54,17 +64,25 @@ days.forEach((day, index) => {
     
 });
 
-hours.forEach(hour => {
+hours.forEach((hour, index) => {
     const hourCell = document.createElement('div');
     
     hourCell.style.gridArea = `hour-${hour.toLowerCase().replaceAll(':', '')}`;
     hourCell.classList.add("hour_cell");
 
     const hourOpt = document.createElement('option');
-    hourOpt.value = hour.toLowerCase();
+    const hourOpt2 = document.createElement('option');
+    
+    
+    hourOpt.value = rows[index];
     hourOpt.textContent = hour;
 
-    hour_data.appendChild(hourOpt);
+    hourOpt2.value = rows[index];
+    hourOpt2.textContent = hour;
+
+    
+    hoursDataStart.appendChild(hourOpt2);
+    hourDataEnd.appendChild(hourOpt);
     
     const labelHour = document.createElement('p');
     labelHour.classList.add('label_hour');

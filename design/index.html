@@ -69,19 +69,19 @@
 
             <div class = "separator">
                 <label for="Category">Category *</label>
-                <input type="text" name="Category" id = "category" class = "inputs" list = "category_opts">
-                <datalist id = "category_opts">
-                    <option value="School">School</option>
-                    <option value="Personal">Personal</option>
-                    <option value="Tasks">Tasks</option>
-                    <option value="Couple">Couple</option>
-                </datalist>
+               
+                <select id = "category_opts">
+                    <option value="School" data-color='#635AE4'>School</option>
+                    <option value="Study" data-color='#F86563'>Study</option>
+                    <option value="Tasks" data-color='#09BE8B'>Tasks</option>
+                    <option value="Couple" data-color='#DCA60E'>Couple</option>
+                </select>
             </div>
 
             <div class = "separator">
                 <label for="Category">Day *</label>
-                <input type="text" name="Day" id = "day" class = "inputs" list = "days">
-                <datalist id = "days">
+                
+                <select id = "days">
                     <option value="mon">Monday</option>
                     <option value="tue">Tuesday</option>
                     <option value="wed">Wednesday</option>
@@ -89,7 +89,7 @@
                     <option value="fri">Friday</option>
                     <option value="sat">Saturday</option>
                     <option value="sun">Sunday</option>
-                </datalist>
+                </select>
             </div>
 
 
@@ -97,27 +97,18 @@
             <div class = "num_separator">
                 <div class="separator">
                     <label for="start">Starts: *</label>
-                    <input type="text" name = "start" list="hours_data" id = "start">
-                    <datalist id = "hours_data" >   
-                    </datalist>
+                    <input type="hidden" name = "startHour" id = "hidden_start">
+                   
+                    <select id = "hours_data_start">   
+                    </select>
                 </div>
                 
                 <div class="separator">
-                    <label for="end">Duration: *</label>
-                    <input type="text" name = "end" list = "duration" id = "end">
-                    <datalist id = "duration" >  
-                        <option value=".5">30 min</option>
-                        <option value="1">1 hr</option> 
-                        <option value="1.5">1.5 hrs</option>
-                        <option value="2">2 hrs</option>
-
-                        <option value="2.5">2.5 hrs</option>
-                        <option value="3">3 hrs</option> 
-                        <option value="3.5">3.5 hrs</option>
-                        <option value="4">4 hrs</option>
-                        <option value="4.5">4.5 hrs</option>
-                        <option value="5">5 hrs</option>
-                    </datalist>
+                    <label for="end">Ends: *</label>
+                    <input type="hidden" name = "startHour" id = "hidden_end">
+                    
+                    <select id = "hours_data_end">  
+                    </select>
                 </div>
                 
             </div>
@@ -134,5 +125,5 @@
 
 <script src="week_script.js"></script>
 <script src="add.js"></script>
-
+<script src="loadSchedule.js"></script>
 </html>

@@ -24,18 +24,45 @@ close.addEventListener('click', () => {
 
 
 
-function createTask(title, notes, category, dayWeek, startHour, startHourValue, endHourValue, color){
-    let task = new Task(title, notes, category, dayWeek, startHour, startHourValue, endHourValue, color);
+function createTask(title, notes, category, dayWeek, startHour, endHour,startHourValue, endHourValue, color){
+    let task = new Task(title, notes, category, dayWeek, startHour, endHour, startHourValue, endHourValue, color);
 
-    const taskCell = document.getElementById(`${task.dayWeek}-${task.startHour}`);
+    const titleLabel = document.createElement('h1');
+    const notesLabel = document.createElement('p');
+    const hourDetail = document.createElement('p');
+
+   
+    titleLabel.textContent = task.title;
+    notesLabel.textContent = task.notes;
+    hourDetail.textContent  =  `from ${task.startHour} to ${task.endHour}`;
+
+
+
+    const taskCell = document.getElementById(`${task.dayWeek}-${task.startHour.replaceAll(':', '').toLowerCase()}`);
     console.log(taskCell);
 
+    /* .toLowerCase().replaceAll(':', '')*/
+
+
+    
+
+    const endHourNumber = parseInt(endHourValue, 10);
+
     taskCell.classList.add('created_cell');
-    taskCell.style.gridRow = `${startHourValue} / ${endHourValue}`;
+    taskCell.style.gridRow = `${startHourValue}/ ${endHourNumber + 1}`;
     taskCell.style.backgroundColor = task.color+'2c';
     taskCell.style.border = `2px solid ${task.color+'7c'}`;
+
+   
+    titleLabel.style.color = task.color;
+    notesLabel.style.color = '#ffffff54';
+
+   
     
-    
+    taskCell.appendChild(titleLabel);
+    taskCell.appendChild(notesLabel);
+    taskCell.appendChild(hourDetail);
+
 
     
 }
@@ -51,16 +78,18 @@ btnSubmit.addEventListener('click', () => {
 
 
     const startHourSelect = document.getElementById('hours_data_start');
-    const startHour = (startHourSelect.options[startHourSelect.selectedIndex].text).toLowerCase().replaceAll(':', '');
+    const endHourSelect = document.getElementById('hours_data_end');
+    const startHour = startHourSelect.options[startHourSelect.selectedIndex].text;
+    const endHour = endHourSelect.options[endHourSelect.selectedIndex].text;
     const startHourValue = document.getElementById('hours_data_start').value;
     const endHourValue = document.getElementById('hours_data_end').value;
 
     
     
 
-    console.log("The results captured are: ", title, notes, category, dayWeek, startHour, startHourValue, endHourValue, color);
+    console.log("The results captured are: ", title, notes, category, dayWeek, startHour, endHour, startHourValue, endHourValue, color);
     
-    createTask(title, notes, category, dayWeek, startHour, startHourValue, endHourValue, color);
+    createTask(title, notes, category, dayWeek, startHour, endHour, startHourValue, endHourValue, color);
 
     
     

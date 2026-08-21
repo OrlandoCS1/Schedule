@@ -1,6 +1,8 @@
-const addButton = document.getElementById('add_btn');
+const addButtons = document.querySelectorAll('.add');
 const modal = document.getElementById('modal');
 const close = document.getElementById('close_modal_btn');
+const floating = document.getElementById('floating_add_btn');
+const body = document.getElementsByTagName('main');
 
 
 
@@ -11,15 +13,19 @@ const classes = ['school', 'personal', 'tasks', 'couple'];
 
 
 
-addButton.addEventListener('click', () => {
-    modal.classList.add('modalOn');
-    modal.classList.remove('modalOff');
-
+addButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log('btn_activated');
+        modal.classList.add('modalOn');
+        modal.classList.remove('modalOff');
+    });
 });
 
 close.addEventListener('click', () => {
     modal.classList.add('modalOff');
     modal.classList.remove('modalOn');
+
+   
 });
 
 
@@ -68,7 +74,9 @@ function createTask(title, notes, category, dayWeek, startHour, endHour,startHou
 }
 
 
-btnSubmit.addEventListener('click', () => {
+
+
+    btnSubmit.addEventListener('click', () => {
     const title = document.getElementById('title').value;
     const notes = document.getElementById('notes').value;
     const category = document.getElementById('category_opts').value;
@@ -91,13 +99,8 @@ btnSubmit.addEventListener('click', () => {
     
     createTask(title, notes, category, dayWeek, startHour, endHour, startHourValue, endHourValue, color);
 
-    
-    
-    
-   
-    
-    
-    
+    modal.classList.add('modalOff');
+    modal.classList.remove('modalOn');
 
 });
 

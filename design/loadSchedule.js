@@ -20,13 +20,9 @@ class Task {
 
 
 
-
 const task = new Task('Task1', 'Task #1 of week', 'School', 'day-mon', '2','1');
 
 
-
-
-console.log(dayFormatted)
 
 
 

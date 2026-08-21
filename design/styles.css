@@ -3,7 +3,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'JetBrains Mono';
+    
     
 }
 
@@ -11,26 +11,43 @@
 
 body{
     position: relative;
-    
+    width: auto;
     background-color: #0D0F14;
     color: white;
-    overflow-x: hidden;
+    overflow-x: scroll;
+    height: 100vh;
+
 }
 
+header{
+    width: 100vw;
+    height: auto;
+   
+    /*border: 10px solid white;*/
+}
 
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: auto;
-    height: 10vh;
+    
+    height: 12vh;
     border-bottom: 1px solid rgba(255, 255, 255, 0.158);
     padding-left: 10px;
     padding-right: 10px;
-    position: static;
+    
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: scroll;
+    position: relative;
 
 }
+
+
 
 .logo_container{
     display: flex;
@@ -41,7 +58,7 @@ nav {
 
 .logo_container i{
     background-color: #6C63FF;
-    border-radius: 10px;
+    border-radius: 10%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -57,6 +74,8 @@ nav {
     font-weight: 700;
 }
 
+
+
 .title{
     display: flex;
     justify-content: center;
@@ -69,6 +88,7 @@ nav {
 #period{
     color: rgba(255, 255, 255, 0.466);
     font-size: 1rem;
+    font-family: 'JetBrains Mono';
 }
 
 #couple_name{
@@ -84,13 +104,16 @@ nav {
     padding: 3px;
     gap: 5px;
     font-size: 1rem;
+    
 }
+
 
 .day_btn{
     color: #61698B;
     text-align: center;
     border-radius: 10px;
     padding: 10px;
+    font-family: 'Outfit';
 
 }
 
@@ -99,20 +122,24 @@ nav {
     background-color: #6C63FF;
     border-radius: 10px;
     padding: 10px;
-    
+    font-family: 'Outfit';
 }
+
+
 
 #week_container{
     border: #61698B;
     border-radius: 20px;
     background-color: #161921;
-    
-    
+    min-width: 900px;
+    min-height: 500px;
+    overflow-x: scroll;
+   
     height: auto;
     display: grid;
     grid-template-columns: 1fr repeat(7, 1fr);
     grid-template-rows: 8vh repeat(34, 8vh);
-
+    
     grid-template-areas:
     "corner day-mon day-tue day-wed day-thu day-fri day-sat day-sun"
 
@@ -184,9 +211,10 @@ nav {
     align-items: center;
     border: 1px solid #2e323d6b;
     background-color: #161921;
-    position: sticky;
+   
     font-size: 1.5rem;
-    top: 0;
+    position: sticky;
+    
 }
 
 .day_cell p{
@@ -230,17 +258,47 @@ nav {
     --border: 1px solid white;
     align-items: center;
     justify-content: end;
-    height: 3vw;
-    min-height: 40px;
+    height: 8vh;
+    min-height: 50px;
+
+   
+}
+
+.slider_cellphone{
+        display: none;
+    }
+
+
+.floating_add_btn{
+    display: none;
+    background-color: #6C63FF;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    position: fixed;
     
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 2.5rem;
+    
+}
+
+.floating_off{
+    display: none;
 }
 
 
 
-#add_btn{
+.add_btn{
     border-radius: 10px;
     width: 5vw;
-    height: 85%;
+    height: 70%;
     color: white;
     background-color: #6C63FF;
     margin-right: 10px;
@@ -249,9 +307,13 @@ nav {
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
-    
-    
+    font-family: 'Outfit';
+    margin: 10px;
+
+
 }
+
+
 
 #add_btn:hover{
     cursor: pointer;
@@ -437,8 +499,44 @@ select::-webkit-scrollbar{
 .created_cell p{
     margin-top: 10px;
     font-size: 0.8rem;
+    color: #ffffff8e;
 }
 
 div::-webkit-scrollbar{
     display: none;
+}
+
+
+@media(max-width: 1000px){
+    
+}
+
+@media (max-width: 495px){
+
+    .logo_container{
+        display: none;
+    }
+
+    .slider{
+        display: none;
+    }
+
+    .slider_cellphone{
+        display: flex;
+    }
+
+    nav{
+        justify-content: center;
+    }
+
+    #add_btn{
+        display: none;
+    }
+
+    .floating_add_btn{
+        display: flex;
+        z-index: 1;
+    }
+
+    
 }
